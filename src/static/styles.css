@@ -2,30 +2,34 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: #253047;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f5f5f5;
+  background:
+    radial-gradient(circle at top, rgba(255, 214, 102, 0.35), transparent 28%),
+    linear-gradient(180deg, #f6f8ff 0%, #eef3f8 100%);
 }
 
 header {
   text-align: center;
-  padding: 20px 0;
+  padding: 28px 24px;
   margin-bottom: 30px;
-  background-color: #1a237e;
+  background: linear-gradient(135deg, #123c69, #1f6f8b);
   color: white;
-  border-radius: 5px;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(18, 60, 105, 0.22);
 }
 
 header h1 {
   margin-bottom: 10px;
+  letter-spacing: 0.04em;
 }
 
 main {
@@ -42,10 +46,12 @@ main {
 }
 
 section {
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(37, 48, 71, 0.1);
+  border: 1px solid rgba(18, 60, 105, 0.08);
+  backdrop-filter: blur(4px);
   width: 100%;
   max-width: 500px;
 }
@@ -53,25 +59,113 @@ section {
 section h3 {
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
-  color: #1a237e;
+  border-bottom: 1px solid #d9e2ec;
+  color: #123c69;
 }
 
 .activity-card {
-  margin-bottom: 15px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  margin-bottom: 18px;
+  padding: 18px;
+  border: 1px solid #d9e2ec;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 12px 24px rgba(31, 111, 139, 0.08);
 }
 
 .activity-card h4 {
   margin-bottom: 10px;
-  color: #0066cc;
+  color: #0f5c78;
 }
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.participants-section {
+  margin-top: 14px;
+  padding: 14px 16px;
+  background: linear-gradient(180deg, #eff8fc 0%, #e6f2f8 100%);
+  border: 1px solid #cfe3ee;
+  border-radius: 14px;
+}
+
+.participants-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.participants-heading {
+  font-weight: bold;
+  color: #123c69;
+}
+
+.participants-count {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(18, 60, 105, 0.08);
+  color: #123c69;
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.participants-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  color: #425466;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.participant-item + .participant-item {
+  border-top: 1px solid rgba(18, 60, 105, 0.08);
+}
+
+.participants-empty {
+  font-style: italic;
+  color: #6b7c93;
+  list-style: none;
+  padding-left: 0;
+}
+
+.participant-email {
+  word-break: break-word;
+}
+
+.participant-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid rgba(198, 40, 40, 0.18);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #c62828;
+  box-shadow: none;
+}
+
+.participant-remove:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(198, 40, 40, 0.12);
+}
+
+.participant-remove svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
 }
 
 .form-group {
@@ -88,24 +182,27 @@ section h3 {
 .form-group select {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 1px solid #cfd8e3;
+  border-radius: 10px;
   font-size: 16px;
+  background-color: #fbfdff;
 }
 
 button {
-  background-color: #1a237e;
+  background: linear-gradient(135deg, #123c69, #1f6f8b);
   color: white;
   border: none;
   padding: 10px 15px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 999px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 12px 20px rgba(18, 60, 105, 0.2);
 }
 
 button:hover {
-  background-color: #3949ab;
+  transform: translateY(-1px);
+  box-shadow: 0 16px 24px rgba(18, 60, 105, 0.24);
 }
 
 .message {
@@ -140,5 +237,5 @@ footer {
   text-align: center;
   margin-top: 30px;
   padding: 20px;
-  color: #666;
+  color: #5f6c7b;
 }
